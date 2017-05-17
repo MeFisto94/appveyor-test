@@ -5,5 +5,6 @@
 PUSHD C:\
 7z e C:\FT.tar.gz
 7z x C:\FT.tar
-DEL /F C:\FT.tar C:\FT.tar.gz
+#DEL /F C:\FT.tar C:\FT.tar.gz
+# Cannot Delete files, use PS Syntax...
 POPD
