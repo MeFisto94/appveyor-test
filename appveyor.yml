@@ -20,7 +20,7 @@ before_build:
 - cmd: echo "before build, would be here"
 - ps: .\build.ps1
 - DEL /F /Q C:\FT.tar C:\FT.tar.gz
-- dir C:\
+- dir C:\freetype-2.8
 - C:\msys64\msys2.exe ls
 build:
   project: C:\openjdk\the.sln
