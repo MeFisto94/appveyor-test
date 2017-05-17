@@ -19,6 +19,11 @@ before_build:
 - dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\"
 - cmd: echo "before build, would be here"
 - ps: .\build.ps1
+- PUSHD C:\
+- 7zip e C:\FT.tar.gz
+- 7zip x C:\FT.tar
+- DEL /F /Q C:\FT.tar C:\FT.tar.gz
+- POPD
 - dir C:\
 - C:\msys64\msys2.exe ls
 build:
