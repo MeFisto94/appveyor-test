@@ -21,7 +21,7 @@ before_build:
 - ps: .\build.ps1
 - DEL /F /Q C:\FT.tar C:\FT.tar.gz
 - dir C:\freetype-2.8
-- C:\msys64\msys2.exe ls
+- C:\msys64\msys2.exe -c "ls /"
 build:
   project: C:\openjdk\the.sln
   verbosity: minimal
