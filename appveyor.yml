@@ -15,9 +15,10 @@ nuget:
   disable_publish_on_pr: true
 before_build:
 - set
-- dir C:\
+- dir C:\msys64
 - dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\"
 - cmd: echo "before build, would be here"
+- ps: .\build.ps1
 build:
   project: C:\openjdk\the.sln
   verbosity: minimal
