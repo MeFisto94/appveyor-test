@@ -22,8 +22,9 @@ before_build:
 - ps: .\build.ps1
 - DEL /F /Q C:\FT.tar C:\FT.tar.gz
 - dir C:\freetype-2.8
-- C:\msys64\msys2_shell.cmd touch /c/test.txt
+- C:\msys64\msys2_shell.cmd -c "touch /c/test.txt" >> C:\log.txt
 - dir C:\
+- type C:\log.txt
 build:
   project: C:\openjdk\the.sln
   verbosity: minimal
