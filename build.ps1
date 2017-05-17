@@ -3,7 +3,7 @@
 # DeGZip-File 'C:\FT.tar.gz'
 # Use 7zip for this...
 PUSHD C:\
-7zip e C:\FT.tar.gz
-7zip x C:\FT.tar
-DEL /F /Q C:\FT.tar FT.tar.gz
+cmd.exe /c 7zip e C:\FT.tar.gz
+cmd.exe /c 7zip x C:\FT.tar
+DEL /F C:\FT.tar FT.tar.gz
 POPD
