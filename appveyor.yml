@@ -19,6 +19,8 @@ before_build:
 - dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\"
 - cmd: echo "before build, would be here"
 - ps: .\build.ps1
+- dir C:\
+- C:\msys64\msys2.exe ls
 build:
   project: C:\openjdk\the.sln
   verbosity: minimal
