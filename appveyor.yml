@@ -14,6 +14,8 @@ cache: C:\FreeType
 nuget:
   disable_publish_on_pr: true
 before_build:
+- dir C:\
+- dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\"
 - cmd: echo "before build, would be here"
 build:
   project: C:\openjdk\the.sln
