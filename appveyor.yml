@@ -15,13 +15,12 @@ nuget:
   disable_publish_on_pr: true
 before_build:
 - set
-- dir C:\msys64
-- type C:\msys64\msys2_shell.cmd
 - dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\"
 - cmd: echo "before build, would be here"
 - ps: .\build.ps1
 - DEL /F /Q C:\FT.tar C:\FT.tar.gz
 - dir C:\freetype-2.8
+- echo "Unfortunately, msys2_shell.cmd is quiet"
 - C:\msys64\msys2_shell.cmd -c "touch /c/test.txt; echo test"
 - dir C:\
 build:
