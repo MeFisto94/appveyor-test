@@ -21,8 +21,8 @@ before_build:
 - DEL /F /Q C:\FT.tar C:\FT.tar.gz
 - dir C:\freetype-2.8
 - echo "Unfortunately, msys2_shell.cmd is quiet"
-- start /b C:\msys64\msys2_shell.cmd -c "touch /c/test.txt; echo test; exit; logout"
-- dir C:\
+#- start /b C:\msys64\msys2_shell.cmd -c "touch /c/test.txt; echo test; exit; logout"
+#- dir C:\
 build:
   project: C:\openjdk\the.sln
   verbosity: minimal
