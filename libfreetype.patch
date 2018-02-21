@@ -1,0 +1,14 @@
+--- freetype.vcxproj.old	2017-05-13 04:28:40 +0000
++++ freetype.vcxproj	2018-02-21 23:41:51 +0000
+@@ -198,9 +198,9 @@
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|Win32'">freetype28STd</TargetName>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug Singlethreaded|x64'">freetype28STd</TargetName>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">freetype28</TargetName>
+-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">freetype28</TargetName>
++    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">freetype</TargetName>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'">freetype28MT</TargetName>
+-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">freetype28MT</TargetName>
++    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|x64'">freetype</TargetName>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'">freetype28ST</TargetName>
+     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|x64'">freetype28ST</TargetName>
+   </PropertyGroup>
