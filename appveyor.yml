@@ -21,8 +21,11 @@ before_build:
 - DEL /F /Q C:\FT.tar C:\FT.tar.gz
 - dir C:\freetype-2.8
 - echo "Unfortunately, msys2_shell.cmd is quiet"
+# because it spawns a new window where the output resides....
 #- start /b C:\msys64\msys2_shell.cmd -c "touch /c/test.txt; echo test; exit; logout"
-#- dir C:\
+#"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools\VC\x64 Native Tools Command Prompt for VS 2017.lnk"
+#"%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+- cmd: build.bat
 build:
   project: C:\openjdk\the.sln
   verbosity: minimal
