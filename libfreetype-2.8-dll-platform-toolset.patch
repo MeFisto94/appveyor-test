@@ -1,0 +1,20 @@
+--- freetype.vcxproj.old	2018-02-22 14:02:33 +0000
++++ freetype.vcxproj	2018-02-22 14:03:43 +0000
+@@ -100,7 +100,7 @@
+     <ConfigurationType>DynamicLibrary</ConfigurationType>
+     <UseOfMfc>false</UseOfMfc>
+     <CharacterSet>MultiByte</CharacterSet>
+-    <PlatformToolset>v100</PlatformToolset>
++    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Multithreaded|Win32'" Label="Configuration">
+     <ConfigurationType>StaticLibrary</ConfigurationType>
+@@ -112,7 +112,7 @@
+     <ConfigurationType>DynamicLibrary</ConfigurationType>
+     <UseOfMfc>false</UseOfMfc>
+     <CharacterSet>MultiByte</CharacterSet>
+-    <PlatformToolset>v100</PlatformToolset>
++    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Singlethreaded|Win32'" Label="Configuration">
+     <ConfigurationType>StaticLibrary</ConfigurationType>
