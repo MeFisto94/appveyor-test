@@ -1,6 +1,4 @@
-git clone https://github.com/MeFisto94/openjdk
 cd openjdk
-common/autoconf/autogen.sh
 
 #Only required on msys2:, but msys2 fails the fixpath.c compilation anyway as of now.
 #echo "Installing ZIP"
