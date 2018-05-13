@@ -15,9 +15,8 @@ MSBuild freetype.sln /property:Platform="x64" /property:Configuration=Release
 MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release Multithreaded"
 popd
 
-cd C:\
 git clone https://github.com/MeFisto94/openjdk
-C:\msys64\msys2_shell.cmd -mingw64 -c "$APPVEYOR_BUILD_FOLDER/common/autoconf/autogen.sh; exit"
+C:\msys64\msys2_shell.cmd -mingw64 -c "/c/openjdk/openjdk/common/autoconf/autogen.sh; exit"
 
 REM C:\MinGW\msys\1.0\msys.bat
 REM Both are wrong: The upper can't enter stuff and the lower misses some environment....
