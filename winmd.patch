@@ -1,5 +1,5 @@
---- a/common/autoconf/configure.ac
-+++ b/common/autoconf/configure.ac
+--- common/autoconf/configure.ac
++++ common/autoconf/configure.ac
 @@ -191,7 +191,7 @@ LIB_SETUP_MISC_LIBS
  LIB_SETUP_STATIC_LINK_LIBSTDCPP
  
@@ -8,8 +8,8 @@
 +PLATFORM_WINMD='/AI"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\store\references"'
  AC_SUBST(PLATFORM_WINMD)
  AC_ARG_VAR(PLATFORM_WINMD, "The compiler instruction to find the platform.winmd file")
---- a/common/autoconf/toolchain.m4
-+++ b/common/autoconf/toolchain.m4
+--- common/autoconf/toolchain.m4
++++ common/autoconf/toolchain.m4
 @@ -1068,7 +1068,7 @@ AC_DEFUN_ONCE([TOOLCHAIN_SETUP_COMPILER_FLAGS_FOR_JDK],
      cl )
  		# Unfortunately we have to use -MD over -MT because of -Zw
@@ -19,8 +19,8 @@
        -D_STATIC_CPPLIB -D_DISABLE_DEPRECATE_STATIC_CPPLIB -DWIN32_LEAN_AND_MEAN \
        -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE \
        -DWIN32 -DIAL"
---- a/hotspot/make/windows/makefiles/adlc.make
-+++ b/hotspot/make/windows/makefiles/adlc.make
+--- hotspot/make/windows/makefiles/adlc.make
++++ hotspot/make/windows/makefiles/adlc.make
 @@ -91,7 +91,7 @@ GENERATED_NAMES_IN_DIR=\
    $(AdlcOutDir)\adGlobals_$(Platform_arch_model).hpp \
    $(AdlcOutDir)\dfa_$(Platform_arch_model).cpp
@@ -30,8 +30,8 @@
  
  {$(WorkSpace)\src\share\vm\adlc}.cpp.obj::
          $(CXX) $(ADLC_CXX_FLAGS) $(EXH_FLAGS) $(PLATFORM_WINMD) $(CXX_INCLUDE_DIRS) /c $<
---- a/hotspot/make/windows/makefiles/compile.make
-+++ b/hotspot/make/windows/makefiles/compile.make
+--- hotspot/make/windows/makefiles/compile.make
++++ hotspot/make/windows/makefiles/compile.make
 @@ -164,7 +164,7 @@ MS_RUNTIME_OPTION = /MD
  STATIC_CPPLIB_OPTION = /D _STATIC_CPPLIB /D _DISABLE_DEPRECATE_STATIC_CPPLIB
  MS_RUNTIME_OPTION = $(MS_RUNTIME_OPTION) $(STATIC_CPPLIB_OPTION)
@@ -41,8 +41,8 @@
  
  # How /GX option is spelled (Dirty Hack)
  GX_OPTION = /EHsc
---- a/hotspot/make/windows/makefiles/product.make
-+++ b/hotspot/make/windows/makefiles/product.make
+--- hotspot/make/windows/makefiles/product.make
++++ hotspot/make/windows/makefiles/product.make
 @@ -37,7 +37,7 @@ default:: $(BUILD_PCH_FILE) $(AOUT) checkAndBuildSA
  !include ../local.make
  !include compile.make
