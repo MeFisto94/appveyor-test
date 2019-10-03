@@ -6,13 +6,23 @@ call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.
 echo Building LibFreeType 2.8
 pushd C:\freetype-2.8\builds\windows\vc2010\
 patch < C:\openjdk\libfreetype.patch
-MSBuild freetype.sln /property:Platform="x64" /property:Configuration=Release
-MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release Multithreaded"
-patch < C:\openjdk\libfreetype-2.8-dll.patch
-echo Since App Veyors v100 Buildchain seems damaged, use the Windows 7.1 SDK to build libfreetype
+
+echo [Building]: LibFreeType 32Bit .lib
+MSBuild freetype.sln /property:Platform="win32" /property:Configuration="Release Multithreaded"
+echo [Building]: LibFreeType 32Bit .dll
+MSBuild freetype.sln /property:Platform="win32" /property:Configuration="Release Multithreaded"
+
+echo Using v100 only for win32.
 patch < C:\openjdk\libfreetype-2.8-dll-platform-toolset.patch
-MSBuild freetype.sln /property:Platform="x64" /property:Configuration=Release
+
+echo [Building]: LibFreeType 64Bit .lib
 MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release Multithreaded"
+echo [Building]: LibFreeType 64bit .dll
+MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release Multithreaded"
+
+REM echo Since App Veyors v100 Buildchain seems damaged, use the Windows 7.1 SDK to build libfreetype
+REM patch < C:\openjdk\libfreetype-2.8-dll.patch
+
 popd
 
 git clone https://github.com/MeFisto94/openjdk
