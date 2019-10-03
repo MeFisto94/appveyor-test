@@ -17,7 +17,7 @@ environment:
 nuget:
   disable_publish_on_pr: true
 before_build:
-- set
+#- set
 - ps: .\build.ps1
 - DEL /F /Q C:\FT.tar C:\FT.tar.gz
 - dir C:\freetype-2.8
