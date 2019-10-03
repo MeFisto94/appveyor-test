@@ -6,9 +6,6 @@ MSYSTEM=MINGW32
 #echo "Installing ZIP"
 #pacman -Sy --noconfirm zip
 
-echo [CONFIGURE]: Patching Autoconf Files!
-patch < /c/openjdk/winmd.patch
-
 echo [CONFIGURE]: Generating configure.
 ./common/autoconf/autogen.sh
 

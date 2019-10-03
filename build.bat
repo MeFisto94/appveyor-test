@@ -29,6 +29,10 @@ REM C:\msys64\msys2_shell.cmd -mingw64 -c "/c/openjdk/openjdk/common/autoconf/au
 REM C:\MinGW\msys\1.0\msys.bat
 REM Both are wrong: The upper can't enter stuff and the lower misses some environment....
 
+cd C:\openjdk\openjdk\
+echo [CONFIGURE]: Patching Autoconf Files!
+patch < /c/openjdk/winmd.patch
+
 REM According to https://github.com/docker/for-win/issues/262, bash.exe provides output when being launched from a powershell script.
 PowerShell C:\MinGW\msys\1.0\bin\bash.exe -c "/c/openjdk/build.sh"
 REM C:\msys64\msys2_shell.cmd -mingw64 -c "$APPVEYOR_BUILD_FOLDER/build.sh; exit"
