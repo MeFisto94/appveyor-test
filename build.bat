@@ -22,7 +22,6 @@ MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release M
 
 REM echo Since App Veyors v100 Buildchain seems damaged, use the Windows 7.1 SDK to build libfreetype
 REM patch < C:\openjdk\libfreetype-2.8-dll.patch
-
 popd
 
 git clone https://github.com/MeFisto94/openjdk
@@ -30,6 +29,6 @@ C:\msys64\msys2_shell.cmd -mingw64 -c "/c/openjdk/openjdk/common/autoconf/autoge
 
 REM C:\MinGW\msys\1.0\msys.bat
 REM Both are wrong: The upper can't enter stuff and the lower misses some environment....
-set MSYSTEM=MINGW32
+
 C:\MinGW\msys\1.0\bin\bash.exe -c "/c/openjdk/build.sh"
 REM C:\msys64\msys2_shell.cmd -mingw64 -c "$APPVEYOR_BUILD_FOLDER/build.sh; exit"

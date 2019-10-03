@@ -1,4 +1,6 @@
-cd openjdk
+cd /c/openjdk/openjdk
+PATH=/usr/bin:$PATH
+MSYSTEM=MINGW32
 
 #Only required on msys2:, but msys2 fails the fixpath.c compilation anyway as of now.
 #echo "Installing ZIP"
