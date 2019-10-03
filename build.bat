@@ -8,17 +8,17 @@ pushd C:\freetype-2.8\builds\windows\vc2010\
 patch < C:\openjdk\libfreetype.patch
 
 echo [Building]: LibFreeType 32Bit .lib
-MSBuild freetype.sln /property:Platform="win32" /property:Configuration="Release Multithreaded"
+MSBuild freetype.sln /property:Platform="win32" /property:Configuration="Release Multithreaded" /property:ConfigurationType="StaticLibrary"
 echo [Building]: LibFreeType 32Bit .dll
-MSBuild freetype.sln /property:Platform="win32" /property:Configuration="Release Multithreaded"
+MSBuild freetype.sln /property:Platform="win32" /property:Configuration="Release Multithreaded" /property:ConfigurationType="DynamicLibrary"
 
-echo Using v100 only for win32.
+echo Applying Windows 7.1 SDK for the x64 build.
 patch < C:\openjdk\libfreetype-2.8-dll-platform-toolset.patch
 
 echo [Building]: LibFreeType 64Bit .lib
-MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release Multithreaded"
+MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release Multithreaded" /property:ConfigurationType="StaticLibrary"
 echo [Building]: LibFreeType 64bit .dll
-MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release Multithreaded"
+MSBuild freetype.sln /property:Platform="x64" /property:Configuration="Release Multithreaded" /property:ConfigurationType="DynamicLibrary"
 
 REM echo Since App Veyors v100 Buildchain seems damaged, use the Windows 7.1 SDK to build libfreetype
 REM patch < C:\openjdk\libfreetype-2.8-dll.patch
