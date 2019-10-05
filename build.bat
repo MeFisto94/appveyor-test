@@ -24,7 +24,7 @@ REM echo Since App Veyors v100 Buildchain seems damaged, use the Windows 7.1 SDK
 REM patch < C:\openjdk\libfreetype-2.8-dll.patch
 popd
 
-git clone https://github.com/MeFisto94/openjdk
+git clone --shallow https://github.com/MeFisto94/openjdk
 REM C:\msys64\msys2_shell.cmd -mingw64 -c "/c/openjdk/openjdk/common/autoconf/autogen.sh; exit"
 REM C:\MinGW\msys\1.0\msys.bat
 REM Both are wrong: The upper can't enter stuff and the lower misses some environment....
