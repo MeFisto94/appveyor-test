@@ -20,7 +20,6 @@ before_build:
 #- set
 - ps: .\build.ps1
 - DEL /F /Q C:\FT.tar C:\FT.tar.gz
-- dir C:\freetype-2.8
 - echo "Unfortunately, msys2_shell.cmd is quiet"
 # because it spawns a new window where the output resides....
 #- start /b C:\msys64\msys2_shell.cmd -c "touch /c/test.txt; echo test; exit; logout"
