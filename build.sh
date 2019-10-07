@@ -13,4 +13,7 @@ echo Linking in the Compiler under /tmp/tools. This is because Autoconf does not
 #ln -s "/c/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.12.25827/bin/HostX64/x64/" /tmp/tools
 ln -s "/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/" /tmp/tools
 ./configure --prefix=/mingw TOOLS_DIR="/tmp/tools" --with-freetype-include="../../freetype-2.8/include/" --with-freetype-lib="../../freetype-2.8/objs/win64/vc2010" PLATFORM_WINMD='/AI"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\store\references\platform.winmd"' --disable-precompiled-headers
-USE_PRECOMPILED_HEADER=0 make
+echo [COMPILING]
+# We intentionally launch make twice as in the buildenv the first make fails with some javac problems which were unreproducable locally.
+# oddly enough a second make invocation seems to be enough.
+USE_PRECOMPILED_HEADER=0 make || USE_PRECOMPILED_HEADER=0 make
